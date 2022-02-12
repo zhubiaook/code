@@ -1,0 +1,11 @@
+install() {
+}
+
+uninstall() {
+}
+
+status() {
+}
+
+info() {
+}
