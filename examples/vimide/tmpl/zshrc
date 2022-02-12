@@ -1,0 +1,20 @@
+# oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="wedisagree"
+plugins=(sublime vscode zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+# basic env
+workspace=/home/workspace
+cd $workspace
+
+# go envs
+export GOVERSION=go1.16
+export GO_INSTALL_DIR=/opt/go
+export GOROOT=$GO_INSTALL_DIR/$GOVERSION
+export GOPATH=$GO_INSTALL_DIR/gopath
+export GO111MODULE="on"
+export GOPROXY=https://goproxy.cn,https://goproxy.io,direct
+export GORIVATE=
+export GOSUMDB=off
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
