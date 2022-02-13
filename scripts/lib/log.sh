@@ -12,8 +12,8 @@
 LOG_LEVEL=${LOG_LEVEL:-5}
 now=$(date +"%F %T")
 
-SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
-source $SCRIPT_ROOT/lib/color.sh
+PROJECT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
+source $PROJECT_ROOT/lib/color.sh
 
 log_info() {
   local prompt="INFO:"
