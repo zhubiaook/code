@@ -13,7 +13,11 @@ class Flask():
 
     # 将实例化后的Flask()变成可调用对象
     def __call__(self, environ: Dict[Any, Any], start_response: Callable):
-        start_response('200 OK', [('Content-Type', 'text/plain')])
+        resp_status = '200 OK'
+        resp_headers = [
+            ('Content-Type', 'text/plain'),
+        ]
+        start_response(resp_status, resp_headers)
         path = environ['PATH_INFO']
         resp = self.urls.get(path)
         if not resp:
